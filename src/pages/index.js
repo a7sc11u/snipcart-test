@@ -1,81 +1,81 @@
-// This is the homepage.
-
 import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
 
-import ItemThumbnail from '../components/ItemThumbnail/ItemThumbnail';
-import Layout from "../components/layout"
+import StoreLayout from "../components/layout"
 import SEO from "../components/seo"
+import Item from "../components/item"
 
-const ThumbnailsWrapper = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-`
+const IndexPage = () => {
+  const webVariants = [
+    {
+      name: "1 user + 20k pageviews/month",
+      price: "35",
+    },
+    {
+      name: "Up to 2 users + 50k pageviews/month",
+      price: "+50",
+    },
+    {
+      name: "Up to 5 users + 100k pageviews/month",
+      price: "+100",
+    },
+    {
+      name: "Up to 15 users + 500k pageviews/month",
+      price: "+400",
+    },
+    {
+      name: "Up to 30 users + 1m pageviews/month",
+      price: "+1000",
+    },
+    {
+      name: "Up to 50 users + 2.5m pageviews/month",
+      price: "+5000",
+    },
+    {
+      name: "Up to 200 users + 10m pageviews/month",
+      price: "+40000",
+    },
+  ]
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const items = data.allMarkdownRemark.edges
+  const servVariants = [
+    {
+      name: "1 server",
+      price: "1500",
+    },
+    {
+      name: "2 servers",
+      price: "+5000",
+    },
+    {
+      name: "3 Servers",
+      price: "+10000",
+    },
+  ]
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All items" />
-      <ThumbnailsWrapper>
-        {items.map(({ node }) => {
-          const { title, image, price } = node.frontmatter
-          return (
-            <ItemThumbnail
-              key={node.fields.slug}
-              link={node.fields.slug}
-              heading={title}
-              image={image.childImageSharp.fluid}
-              price={price}
-            />
-          )
-        })}
-      </ThumbnailsWrapper>
-        
+  return (
+    <StoreLayout>
+      <Item
+        id="x1p2q4r"
+        guid="bd27e032-e05f-4766-96d2-0881e819f82c"
+        title="Jali Web"
+        data-item-url="https://f5-shop.netlify.app"
+        description="Jali Regular"
+        licence="Web + Desktop"
+        price="35"
+        variants={webVariants}
+      />
 
-      </Layout>
-    )
-  }
+      <Item
+        id="p2o3t4c"
+        guid="bd27e032-e05f-4766-96d2-0881e819f82c"
+        title="Jali Server"
+        data-item-url="https://f5-shop.netlify.app"
+        description="Jali Regular"
+        licence="Server"
+        price="1500"
+        variants={servVariants}
+      />
+    </StoreLayout>
+  )
 }
 
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            price
-            image {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+export default IndexPage
