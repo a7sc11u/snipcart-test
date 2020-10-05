@@ -53,14 +53,18 @@ export default () => {
       <ShopName>
         <LinkStyled to="/">F5</LinkStyled>
       </ShopName>
-      <CartSummary className="snipcart-summary">
-        <a href="#" className="snipcart-checkout">
-          <ShoppingCart size="40px" />
-        </a>
 
-        <div>
-          <span className="snipcart-items-count"></span> |
-          <span className="snipcart-total-price"></span>
+      <CartSummary>
+        <button class="snipcart-customer-signin">My account</button>
+
+        <div className="snipcart-summary">
+          <a href="#" className="snipcart-checkout">
+            <ShoppingCart size="40px" />
+          </a>
+          <div>
+            <span className="snipcart-items-count"></span> |
+            <span className="snipcart-total-price"></span>
+          </div>
         </div>
       </CartSummary>
     </HeaderMinorStyled>
