@@ -8,7 +8,7 @@ const IndexPage = () => {
   const webVariants = [
     {
       name: "1 user + 20k pageviews/month",
-      price: "35",
+      price: "",
     },
     {
       name: "Up to 2 users + 50k pageviews/month",
@@ -39,7 +39,7 @@ const IndexPage = () => {
   const servVariants = [
     {
       name: "1 server",
-      price: "1500",
+      price: "",
     },
     {
       name: "2 servers",
