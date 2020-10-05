@@ -66,7 +66,7 @@ const IndexPage = () => {
 
       <Item
         id="p2o3t4c"
-        guid="bd27e032-e05f-4766-96d2-0881e819f82c"
+        guid="b22720d5-e761-443c-96f9-0502253b1892"
         title="Jali Server"
         data-item-url="https://f5-shop.netlify.app"
         description="Jali Regular"
