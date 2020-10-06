@@ -55,8 +55,6 @@ export default () => {
       </ShopName>
 
       <CartSummary>
-        <button class="snipcart-customer-signin">My account</button>
-
         <div className="snipcart-summary">
           <a href="#" className="snipcart-checkout">
             <ShoppingCart size="40px" />

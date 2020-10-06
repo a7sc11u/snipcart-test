@@ -18,7 +18,9 @@ export default props => {
 
   return (
     <div>
-      <h3>{title}</h3>
+      <h3>
+        {title} from £{price}
+      </h3>
 
       <button
         className="snipcart-add-item"
