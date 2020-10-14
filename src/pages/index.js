@@ -101,7 +101,7 @@ const IndexPage = () => {
     <Item
         id="potato6"
         guid="e970d783-d485-431c-915b-6c66b438c41b"
-        title="Jali Latin ExtraLight- Web Licence"
+        title="Jali Latin ExtraLight- Desktop Licence"
         data-item-url="/"
         description="Jali Latin ExtraLigh"
         licence="Desktop Licence"
