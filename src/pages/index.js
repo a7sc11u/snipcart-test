@@ -84,7 +84,32 @@ const IndexPage = () => {
 
   return (
     <StoreLayout>
+
+
+
       <Item
+        id="potato5"
+        guid="e970d783-d485-431c-915b-6c66b438c41b"
+        title="Jali Latin ExtraLight- Web Licence"
+        data-item-url="/"
+        description="Jali Latin ExtraLigh"
+        licence="Web Licence"
+        price="25"
+        variants={webVariants}
+      />
+
+    <Item
+        id="potato6"
+        guid="e970d783-d485-431c-915b-6c66b438c41b"
+        title="Jali Latin ExtraLight- Web Licence"
+        data-item-url="/"
+        description="Jali Latin ExtraLigh"
+        licence="Desktop Licence"
+        price="25"
+        variants={deskVariants}
+      />
+
+      {/* <Item
         id="x1p2q4r"
         guid="bd27e032-e05f-4766-96d2-0881e819f82c"
         title="Jali Regular - Web Licence"
@@ -122,7 +147,7 @@ const IndexPage = () => {
         licence="Server"
         price="1500"
         variants={servVariants}
-      />
+      /> */}
     </StoreLayout>
   )
 }
